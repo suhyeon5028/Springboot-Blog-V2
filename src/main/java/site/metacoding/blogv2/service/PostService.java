@@ -35,6 +35,10 @@ public class PostService {
         }
     }
 
+    // 조회수 증가
+
+    // 인기 게시물 처리~!!
+
     public Page<Post> 게시글목록(Integer page) {
         PageRequest pq = PageRequest.of(page, 3, Sort.by(Direction.DESC, "id"));
         return postRepository.findAll(pq);
